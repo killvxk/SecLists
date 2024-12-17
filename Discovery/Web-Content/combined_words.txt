@@ -4,6 +4,7 @@
 .config
 .cvs
 .cvsignore
+.env
 .forward
 .git
 .git-rewrite
@@ -86,6 +87,7 @@
 .well-known/repute-template
 .well-known/resourcesync
 .well-known/security.txt
+.well-known/humans.txt
 .well-known/stun-key
 .well-known/thread
 .well-known/time
@@ -174,6 +176,9 @@
 403
 404
 42
+4DWEBTEST
+4DSTATS
+4DHTMLSTATS
 5
 50
 500
@@ -492,6 +497,7 @@ act
 action
 actions
 activate
+activation
 active
 activeCollab
 activex
@@ -608,6 +614,7 @@ alert
 alerts
 alias
 aliases
+alive
 all
 all-wcprops
 alltime
@@ -1057,6 +1064,7 @@ ch
 chan
 change
 change_password
+change-password
 changed
 changelog
 changepw
@@ -1076,6 +1084,7 @@ checkoutanon
 checkoutreview
 checkpoint
 checks
+check-email
 child
 children
 china
@@ -1207,6 +1216,7 @@ conference
 conferences
 config
 config.local
+config.properties
 configs
 configuration
 configure
@@ -2057,6 +2067,7 @@ header_logo
 headers
 headlines
 health
+healthz
 healthcare
 hello
 helloworld
@@ -2482,6 +2493,7 @@ listview
 live
 livechat
 livehelp
+liveness
 livesupport
 livezilla
 lo
@@ -2513,6 +2525,7 @@ login-us
 login1
 login_db
 login_sendpass
+login_check
 loginadmin
 loginflat
 logins
@@ -3427,6 +3440,7 @@ read
 reader
 readfile
 readfolder
+readiness
 readme
 real
 realaudio
@@ -3686,6 +3700,7 @@ seminar
 seminars
 send
 send-password
+send-email
 send_order
 send_pwd
 send_to_friend
@@ -4272,6 +4287,7 @@ ucp
 uddi
 uds
 ui
+ui_config.properties
 uk
 umbraco
 umbraco_client
@@ -4941,7 +4957,6 @@ sorry
 .7
 111
 76
-activation
 dmca
 59
 warranty
@@ -6367,7 +6382,6 @@ apfeed
 astats
 autofiles
 captchas
-change-password
 claim-profile
 commons
 compile
@@ -12602,7 +12616,6 @@ ais
 ajax_dz
 alberghi
 albmgr
-alive
 amecache
 amenities
 andrea
@@ -15010,7 +15023,6 @@ linkswidget
 linx
 listado
 local-cgi
-login_check
 loginbox
 logincheck
 lokales
@@ -18536,7 +18548,6 @@ sectors
 secureadmin
 sef
 selling-homes
-send-email
 send-to
 send_page
 send_pass
@@ -19417,6 +19428,7 @@ xeabdbfddaccx
 _2
 _excel
 __errfiles__
+__better_errors
 _api
 _calendar
 _control
@@ -27219,7 +27231,6 @@ chang
 change_email
 chat_room
 cheboksary
-check-email
 checklink
 checklists
 chercher
@@ -39900,6 +39911,10 @@ Suche
 TermsOfUse
 Tests
 WP
+.hg
+.bzr
+._darcs
+BitKeeper
 AR
 About-Us
 Australia
@@ -45547,7 +45562,6 @@ zoomifyViewer
 .email.shtml
 .en.htm
 .engine
-.env
 .error-log
 .eshop
 .esp
@@ -65919,6 +65933,7 @@ __DotNet
 __MACOSX
 _dbAdmin
 aImages
+actuator
 adMan
 add2Cart
 addActivity
@@ -108287,7 +108302,6 @@ readercomments
 readeroffers
 readersdigest
 readerswrite
-readiness
 reading-list
 reading_room
 readinglist
