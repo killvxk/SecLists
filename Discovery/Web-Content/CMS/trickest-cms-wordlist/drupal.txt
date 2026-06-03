@@ -147,14 +147,11 @@ core/profiles/standard/config/optional/core.entity_view_display.media.image.medi
 core/profiles/standard/config/install/field.storage.user.user_picture.yml
 core/profiles/standard/config/install/field.field.block_content.basic.body.yml
 core/profiles/standard/config/install/user.role.authenticated.yml
-core/profiles/standard/config/install/core.entity_view_display.comment.comment.default.yml
 core/profiles/standard/config/install/user.role.anonymous.yml
 core/profiles/standard/config/install/field.storage.block_content.body.yml
 core/profiles/standard/config/install/filter.format.full_html.yml
 core/profiles/standard/config/install/filter.format.basic_html.yml
 core/profiles/standard/config/install/user.settings.yml
-core/profiles/standard/config/install/comment.type.comment.yml
-core/profiles/standard/config/install/field.field.comment.comment.comment_body.yml
 core/profiles/standard/config/install/system.cron.yml
 core/profiles/standard/config/install/core.menu.static_menu_link_overrides.yml
 core/profiles/standard/config/install/editor.editor.full_html.yml
@@ -167,7 +164,6 @@ core/profiles/standard/config/install/system.site.yml
 core/profiles/standard/config/install/core.entity_view_display.user.user.default.yml
 core/profiles/standard/config/install/filter.format.restricted_html.yml
 core/profiles/standard/config/install/system.theme.yml
-core/profiles/standard/config/install/core.entity_form_display.comment.comment.default.yml
 core/profiles/standard/config/install/core.entity_form_display.user.user.default.yml
 core/profiles/standard/config/install/field.field.user.user.user_picture.yml
 core/profiles/standard/config/install/editor.editor.basic_html.yml
@@ -2006,7 +2002,6 @@ core/lib/Drupal/Core/Routing/LocalAwareRedirectResponseTrait.php
 core/lib/Drupal/Core/Routing/UrlMatcher.php
 core/lib/Drupal/Core/Routing/CacheableSecuredRedirectResponse.php
 core/lib/Drupal/Core/Routing/RouteMatchInterface.php
-core/lib/Drupal/Core/Routing/RoutePreloader.php
 core/lib/Drupal/Core/Routing/RequestContext.php
 core/lib/Drupal/Core/Routing/UrlGenerator.php
 core/lib/Drupal/Core/Routing/UnsupportedRouteAttributePropertyException.php
@@ -5802,10 +5797,12 @@ core/modules/text/src/Hook/TextHooks.php
 core/modules/text/text.info.yml
 core/modules/text/js/text.js
 core/modules/text/tests/src/Unit/Plugin/Field/FieldType/TextFieldItemListTest.php
+core/modules/text/tests/src/Unit/TextProcessedTest.php
 core/modules/text/tests/src/Functional/TextFieldTest.php
 core/modules/text/tests/src/Functional/TextSummaryNodeFieldsTokenTest.php
 core/modules/text/tests/src/Functional/GenericTest.php
 core/modules/text/tests/src/Functional/TextareaWithSummaryTest.php
+core/modules/text/tests/src/Kernel/TextProcessedAttachmentsTest.php
 core/modules/text/tests/src/Kernel/TextWithSummaryItemTest.php
 core/modules/text/tests/src/Kernel/TextFormatterTest.php
 core/modules/text/tests/src/Kernel/TextSummaryTest.php
@@ -7047,7 +7044,6 @@ core/modules/rest/rest.post_update.php
 core/modules/rest/config/schema/rest.views.schema.yml
 core/modules/rest/config/schema/rest.schema.yml
 core/modules/rest/config/optional/rest.resource.entity.node.yml
-core/modules/rest/rest.routing.yml
 core/modules/rest/src/Attribute/RestResource.php
 core/modules/rest/src/ResourceResponseInterface.php
 core/modules/rest/src/ResourceResponse.php
@@ -7070,10 +7066,8 @@ core/modules/rest/src/Routing/ResourceRoutes.php
 core/modules/rest/src/ResourceResponseTrait.php
 core/modules/rest/src/EventSubscriber/ResourceResponseSubscriber.php
 core/modules/rest/src/EventSubscriber/EntityResourcePostRouteSubscriber.php
-core/modules/rest/src/EventSubscriber/DeprecatedUserRoutesSubscriber.php
 core/modules/rest/src/RestResourceConfigInterface.php
 core/modules/rest/src/ModifiedResourceResponse.php
-core/modules/rest/src/Controller/RestAuthenticationController.php
 core/modules/rest/src/Hook/RestHooks.php
 core/modules/rest/src/RequestHandler.php
 core/modules/rest/rest.services.yml
@@ -7094,7 +7088,6 @@ core/modules/rest/tests/src/Functional/EntityResource/ModeratedNode/ModeratedNod
 core/modules/rest/tests/src/Functional/EntityResource/ModeratedNode/ModeratedNodeJsonAnonTest.php
 core/modules/rest/tests/src/Functional/EntityResource/ModeratedNode/ModeratedNodeJsonBasicAuthTest.php
 core/modules/rest/tests/src/Functional/EntityResource/ModeratedNode/ModeratedNodeXmlBasicAuthTest.php
-core/modules/rest/tests/src/Functional/RestLoginHttpTest.php
 core/modules/rest/tests/src/Functional/Views/FieldCounterTest.php
 core/modules/rest/tests/src/Functional/Views/ExcludedFieldTokenTest.php
 core/modules/rest/tests/src/Functional/Views/RestExportAuthTest.php
@@ -11226,7 +11219,9 @@ core/modules/system/tests/modules/router_test_directory/src/RouterTestServicePro
 core/modules/system/tests/modules/router_test_directory/src/RouteTestSubscriber.php
 core/modules/system/tests/modules/router_test_directory/src/RouterTestEarlyExceptionSubscriber.php
 core/modules/system/tests/modules/router_test_directory/src/Controller/TestClassAttribute.php
+core/modules/system/tests/modules/router_test_directory/src/Controller/TestInvalidController.php
 core/modules/system/tests/modules/router_test_directory/src/Controller/TestAttributes.php
+core/modules/system/tests/modules/router_test_directory/src/Controller/TestMissingDependency.php
 core/modules/system/tests/modules/router_test_directory/src/Form.php
 core/modules/system/tests/modules/router_test_directory/src/TestControllers.php
 core/modules/system/tests/modules/router_test_directory/src/Hook/RouterTestThemeHooks.php
@@ -12308,6 +12303,8 @@ core/modules/shortcut/src/ShortcutSetStorage.php
 core/modules/shortcut/shortcut.services.yml
 core/modules/shortcut/images/favstar.svg
 core/modules/shortcut/images/favstar-rtl.svg
+core/modules/shortcut/images/backport-themes/claro/favstar.svg
+core/modules/shortcut/images/backport-themes/claro/favstar-rtl.svg
 core/modules/shortcut/shortcut.info.yml
 core/modules/shortcut/shortcut.links.menu.yml
 core/modules/shortcut/shortcut.install
@@ -14383,7 +14380,6 @@ core/tests/Drupal/Tests/Core/Routing/RouteCompilerTest.php
 core/tests/Drupal/Tests/Core/Routing/RouterTest.php
 core/tests/Drupal/Tests/Core/Routing/RouteMatchTestBase.php
 core/tests/Drupal/Tests/Core/Routing/UrlGeneratorTest.php
-core/tests/Drupal/Tests/Core/Routing/RoutePreloaderTest.php
 core/tests/Drupal/Tests/Core/Routing/RouteBuilderTest.php
 core/tests/Drupal/Tests/Core/Routing/RouteMatchTest.php
 core/tests/Drupal/Tests/Core/Routing/AcceptHeaderMatcherTest.php
@@ -15220,6 +15216,7 @@ core/themes/olivero/theme-settings.php
 core/themes/olivero/olivero.libraries.yml
 core/themes/olivero/tests/src/Unit/OliveroHexToHslTest.php
 core/themes/olivero/tests/src/Functional/NodeTitleTest.php
+core/themes/olivero/tests/src/Functional/Update/OliveroPostUpdateTest.php
 core/themes/olivero/README.md
 core/themes/olivero/olivero.info.yml
 core/themes/olivero/templates/field/field--text-with-summary.html.twig
@@ -15672,9 +15669,7 @@ core/themes/default_admin/migration/media/icons/toolbar-meta/backtosite.svg
 core/themes/default_admin/migration/media/icons/toolbar-meta/rebuild-cache.svg
 core/themes/default_admin/migration/media/icons/toolbar-meta/responsive-preview.svg
 core/themes/default_admin/migration/media/icons/toolbar-meta/search.svg
-core/themes/default_admin/migration/media/icons/toolbar-meta/shortcut.svg
 core/themes/default_admin/migration/media/icons/toolbar-meta/user.svg
-core/themes/default_admin/migration/media/icons/toolbar-meta/shortcut-filled.svg
 core/themes/default_admin/migration/media/icons/form/toggle-unchecked.svg
 core/themes/default_admin/migration/media/icons/form/asterisk.svg
 core/themes/default_admin/migration/media/icons/form/checked.svg
@@ -15807,8 +15802,6 @@ core/themes/default_admin/images/src/sort--asc.svg
 core/themes/default_admin/images/src/sort--inactive--ltr.svg
 core/themes/default_admin/images/src/tabledrag-tree.svg
 core/themes/default_admin/images/src/hamburger-menu.svg
-core/themes/default_admin/images/shortcut/favstar.svg
-core/themes/default_admin/images/shortcut/favstar-rtl.svg
 core/themes/default_admin/images/core/ffffff/php-logo.svg
 core/themes/default_admin/images/core/ffffff/ex.svg
 core/themes/default_admin/images/core/ffffff/database.svg
@@ -16072,8 +16065,6 @@ core/themes/claro/images/src/sort--asc.svg
 core/themes/claro/images/src/sort--inactive--ltr.svg
 core/themes/claro/images/src/tabledrag-tree.svg
 core/themes/claro/images/src/hamburger-menu.svg
-core/themes/claro/images/shortcut/favstar.svg
-core/themes/claro/images/shortcut/favstar-rtl.svg
 core/themes/claro/images/core/ffffff/php-logo.svg
 core/themes/claro/images/core/ffffff/ex.svg
 core/themes/claro/images/core/ffffff/database.svg
