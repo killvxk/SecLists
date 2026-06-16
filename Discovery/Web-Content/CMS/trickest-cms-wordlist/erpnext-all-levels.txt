@@ -748,6 +748,8 @@ banking/README.md
 README.md
 commitlint.config.js
 .git-blame-ignore-revs
+.greptile/config.json
+config.json
 sider.yml
 .releaserc
 .pre-commit-config.yaml
@@ -9182,6 +9184,9 @@ nl.po
 erpnext/locale/id.po
 locale/id.po
 id.po
+erpnext/locale/hi.po
+locale/hi.po
+hi.po
 erpnext/locale/it.po
 locale/it.po
 it.po
