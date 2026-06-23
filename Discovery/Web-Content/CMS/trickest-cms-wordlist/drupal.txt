@@ -1405,7 +1405,6 @@ core/lib/Drupal/Core/Installer/ExtensionListTrait.php
 core/lib/Drupal/Core/Installer/Form/SiteSettingsForm.php
 core/lib/Drupal/Core/Installer/Form/SelectLanguageForm.php
 core/lib/Drupal/Core/Installer/Form/SiteConfigureForm.php
-core/lib/Drupal/Core/Installer/Form/SelectProfileForm.php
 core/lib/Drupal/Core/Installer/InstallerModuleExtensionList.php
 core/lib/Drupal/Core/Installer/InstallerKernel.php
 core/lib/Drupal/Core/Installer/InstallerThemeExtensionList.php
@@ -2689,6 +2688,7 @@ core/lib/Drupal/Core/Hook/Attribute/Hook.php
 core/lib/Drupal/Core/Hook/Attribute/ReorderHook.php
 core/lib/Drupal/Core/Hook/Attribute/ProceduralHookScanStop.php
 core/lib/Drupal/Core/Hook/Attribute/RemoveHook.php
+core/lib/Drupal/Core/Hook/Attribute/HookDependsOnModule.php
 core/lib/Drupal/Core/Hook/Attribute/LegacyRequirementsHook.php
 core/lib/Drupal/Core/Hook/Attribute/LegacyHook.php
 core/lib/Drupal/Core/Hook/Order/RelativeOrderBase.php
@@ -8216,6 +8216,7 @@ core/modules/user/src/EventSubscriber/AccessDeniedSubscriber.php
 core/modules/user/src/EventSubscriber/UserFloodSubscriber.php
 core/modules/user/src/UserInterface.php
 core/modules/user/src/UserData.php
+core/modules/user/src/Command/LoginCommand.php
 core/modules/user/src/Form/UserPermissionsForm.php
 core/modules/user/src/Form/EntityPermissionsForm.php
 core/modules/user/src/Form/UserMultipleCancelConfirm.php
@@ -8319,6 +8320,7 @@ core/modules/user/tests/src/Functional/UserLanguageCreationTest.php
 core/modules/user/tests/src/Functional/UserLogoutTest.php
 core/modules/user/tests/src/Functional/UserRolesAssignmentTest.php
 core/modules/user/tests/src/Functional/UserRegistrationRestTest.php
+core/modules/user/tests/src/Functional/Command/LoginCommandTest.php
 core/modules/user/tests/src/Functional/UserCancelTest.php
 core/modules/user/tests/src/Functional/UserCreateFailMailTest.php
 core/modules/user/tests/src/Functional/UserRoleAdminTest.php
@@ -8367,6 +8369,7 @@ core/modules/user/tests/src/Kernel/UserAdminSettingsFormTest.php
 core/modules/user/tests/src/Kernel/UserAccountFormFieldsTest.php
 core/modules/user/tests/src/Kernel/UserRoleEntityTest.php
 core/modules/user/tests/src/Kernel/UserDeleteTest.php
+core/modules/user/tests/src/Kernel/Command/LoginCommandTest.php
 core/modules/user/tests/src/Kernel/UserRoleDeleteTest.php
 core/modules/user/tests/src/Kernel/Condition/UserRoleConditionTest.php
 core/modules/user/tests/src/Kernel/Controller/UserControllerTest.php
@@ -10808,6 +10811,10 @@ core/modules/system/tests/modules/services_defaults_test/src/TestService.php
 core/modules/system/tests/modules/services_defaults_test/services_defaults_test.info.yml
 core/modules/system/tests/modules/unversioned_assets_test/unversioned_assets_test.info.yml
 core/modules/system/tests/modules/unversioned_assets_test/src/Hook/UnversionedAssetsTestHooks.php
+core/modules/system/tests/modules/hook_collector_depends_test/src/Hook/DependsOnModuleMethodHooks.php
+core/modules/system/tests/modules/hook_collector_depends_test/src/Hook/DependsOnModuleMultipleHooks.php
+core/modules/system/tests/modules/hook_collector_depends_test/src/Hook/DependsOnModuleClassHooks.php
+core/modules/system/tests/modules/hook_collector_depends_test/hook_collector_depends_test.info.yml
 core/modules/system/tests/modules/test_htmx/test_htmx.info.yml
 core/modules/system/tests/modules/test_htmx/test_htmx.libraries.yml
 core/modules/system/tests/modules/test_htmx/src/Form/HtmxTestAjaxForm.php
@@ -14151,6 +14158,7 @@ core/tests/Drupal/Tests/Core/StackMiddleware/AjaxPageStateTest.php
 core/tests/Drupal/Tests/Core/StackMiddleware/NegotiationMiddlewareTest.php
 core/tests/Drupal/Tests/Core/Asset/CssOptimizerUnitTest.php
 core/tests/Drupal/Tests/Core/Asset/LibraryDiscoveryTest.php
+core/tests/Drupal/Tests/Core/Asset/JsCollectionGrouperUnitTest.php
 core/tests/Drupal/Tests/Core/Asset/CssCollectionRendererUnitTest.php
 core/tests/Drupal/Tests/Core/Asset/LibraryDiscoveryCollectorTest.php
 core/tests/Drupal/Tests/Core/Asset/JsOptimizerUnitTest.php
@@ -14596,6 +14604,7 @@ core/tests/Drupal/Tests/Core/Hook/HookCollectorPassTest.php
 core/tests/Drupal/Tests/Core/Hook/ImplementationListTest.php
 core/tests/Drupal/Tests/Core/Cron/CronSuspendQueueDelayTest.php
 core/tests/Drupal/Tests/Core/Datetime/TimeZoneFormHelperTest.php
+core/tests/Drupal/Tests/Core/Datetime/Element/DateElementBaseTest.php
 core/tests/Drupal/Tests/Core/Datetime/DateTest.php
 core/tests/Drupal/Tests/Core/Datetime/DrupalDateTimeTest.php
 core/tests/Drupal/Tests/Core/Datetime/DateHelperTest.php

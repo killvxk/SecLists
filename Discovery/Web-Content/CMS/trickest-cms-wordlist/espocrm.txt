@@ -3497,9 +3497,11 @@ application/Espo/Classes/Cleanup/Reminders.php
 application/Espo/Classes/Cleanup/PasswordChangeRequests.php
 application/Espo/Classes/Cleanup/AppLog.php
 application/Espo/Classes/Cleanup/TwoFactorCodes.php
+application/Espo/Classes/AppInfo/CoreVersion.php
 application/Espo/Classes/AppInfo/Jobs.php
 application/Espo/Classes/AppInfo/Container.php
 application/Espo/Classes/AppInfo/Binding.php
+application/Espo/Classes/AppInfo/Version.php
 application/Espo/Classes/ConsoleCommands/PopulateNumbers.php
 application/Espo/Classes/ConsoleCommands/CheckFilePermissions.php
 application/Espo/Classes/ConsoleCommands/SetConfigParam.php
@@ -6700,6 +6702,7 @@ application/Espo/Tools/OpenApi/FieldSchemaBuilders/CurrencyType.php
 application/Espo/Tools/OpenApi/FieldSchemaBuilders/TextType.php
 application/Espo/Tools/OpenApi/FieldSchemaBuilders/AutoincrementType.php
 application/Espo/Tools/Installer/DatabaseConfigDataProvider.php
+application/Espo/Tools/ConsoleAppInfo/InfoProvider.php
 application/Espo/Tools/PopupNotification/Service.php
 application/Espo/Tools/PopupNotification/Item.php
 application/Espo/Tools/PopupNotification/Provider.php
@@ -8869,6 +8872,8 @@ client/src/views/site-portal/navbar.js
 client/src/views/site-portal/header.js
 client/src/views/list-related.ts
 client/src/views/header.js
+client/src/views/last-viewed/fields/created-at.ts
+client/src/views/last-viewed/fields/target-type.ts
 client/src/views/last-viewed/record/list.js
 client/src/views/last-viewed/list.js
 client/src/views/extension/record/row-actions.js
