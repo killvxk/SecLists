@@ -1072,6 +1072,7 @@ cms/static/cms/sass/components/pagetree/_all.scss
 cms/static/cms/sass/components/_welcome.scss
 cms/static/cms/sass/components/_sideframe.scss
 cms/static/cms/sass/cms.welcome.scss
+cms/static/cms/js/admin/usersettings.js
 cms/static/cms/js/admin/actions.js
 cms/static/cms/js/admin/language-selector.js
 cms/static/cms/js/admin.pagetree.js
@@ -1083,6 +1084,7 @@ cms/static/cms/js/widgets/forms.slugwidget.js
 cms/static/cms/js/widgets/wizard.pagetypeselect.js
 cms/static/cms/js/widgets/forms.apphookselect.js
 cms/static/cms/js/widgets/forms.pagesmartlinkwidget.js
+cms/static/cms/js/welcome.js
 cms/static/cms/js/admin.changeform.js
 cms/static/cms/js/admin.base.js
 cms/static/cms/js/toolbar.js
@@ -1224,6 +1226,7 @@ cms/migrations/0031_remove_fields.py
 cms/migrations/0004_auto_20140924_1038.py
 cms/migrations/0014_auto_20160404_1908.py
 cms/migrations/0008_auto_20150208_2149.py
+cms/migrations/0043_alter_globalpagepermission_can_view_and_more.py
 cms/migrations/0026_title_placeholders.py
 cms/migrations/0041_alter_pageurl_unique_together_pageurl_site_and_more.py
 cms/migrations/0018_create_pagenode.py
